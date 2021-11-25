@@ -1,0 +1,23 @@
+@import '../../styles/colors';
+
+.obs {
+
+    &__container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $green2;
+        height: 10rem;
+        width: 100%;
+        padding: 0 10%;
+
+        p {
+            text-align: justify;
+            line-height: 2rem;
+
+            strong {
+                font-weight: 700;
+            }
+        }
+    }
+}
