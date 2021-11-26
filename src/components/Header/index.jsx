@@ -9,7 +9,7 @@ const Header = () => {
             <div className="header__logo--state">
                 <img src={acessabr}></img>
                 <span>/</span>
-                <span>Caruaru - PE</span>
+                <p>Caruaru - PE</p>
             </div>
             <div className="header__logo--logo">
                 <span>apoio:</span>
