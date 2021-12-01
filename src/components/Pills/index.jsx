@@ -1,19 +1,24 @@
 import React from "react";
-import './style.scss';
-import PropTypes from 'prop-types';
+import "./style.scss";
+import PropTypes from "prop-types";
 
-const Pills = ({local, onClick, selected}) => {
+const Pills = ({ local, onClick, selected }) => {
     return (
-        <div onClick={onClick} className={`pills__container ${selected ? 'pills__container-active' : ''}`}>
-            { local }
+        <div
+            onClick={onClick}
+            className={`pills__container ${
+                selected ? "pills__container-active" : ""
+            }`}
+        >
+            {local}
         </div>
-    )
-}
+    );
+};
 
 Pills.propType = {
     local: PropTypes.string.isRequired,
     onClick: PropTypes.func,
-    selected: PropTypes.bool
-}
+    selected: PropTypes.bool,
+};
 
 export default Pills;

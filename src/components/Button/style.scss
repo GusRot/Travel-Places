@@ -1,17 +1,16 @@
-@import '../../styles/colors';
-
+@import "../../styles/colors";
 
 .button {
     cursor: pointer;
+    margin-top: rem;
     border-radius: 1rem;
     width: 65%;
     height: 3rem;
     font-size: 1.4rem;
     font-weight: 500;
-    background-color: #00B6C1;
-    border: 1px solid #02939C;
+    background-color: #00b6c1;
+    border: 1px solid #02939c;
     color: $white;
-    -webkit-box-shadow: 1px 1px 4px 0px rgba(0,0,0,0.3); 
-    box-shadow: 1px 1px 4px 0px rgba(0,0,0,0.3);
-
+    -webkit-box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.3);
+    box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.3);
 }

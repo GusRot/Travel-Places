@@ -1,24 +1,20 @@
-@import '../../styles/colors';
+@import "../../styles/colors";
 
 .pills {
-
     &__container {
-    background-color: grey;
-    font-size: 1.7rem;
-    font-weight: 400;
-    color: $white;
-    height: 2rem;
-    padding: 0.15rem 2rem;
-    border-radius: 2rem;
-    cursor: pointer;
-    -webkit-box-shadow: 1px 1px 4px 0px rgba(0,0,0,0.4);
-    box-shadow: 1px 1px 4px 0px rgba(0,0,0,0.4);
-    
+        background-color: grey;
+        font-size: 1.7rem;
+        font-weight: 400;
+        color: $white;
+        height: 2rem;
+        padding: 0.15rem 2rem;
+        border-radius: 2rem;
+        cursor: pointer;
+        -webkit-box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.4);
+        box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.4);
+
         &-active {
             background-color: $green;
         }
-
     }
-
-
 }

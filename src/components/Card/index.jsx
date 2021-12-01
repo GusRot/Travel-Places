@@ -1,36 +1,39 @@
-import React from "react";
-import './style.scss';
-import ciri from '../../assets/Nova pasta/Ciri.jpg'
+import React, { useState } from "react";
+import "./style.scss";
 import Button from "../Button";
+import Modal from "react-modal";
+import DestinationsModal from "../DestinationsModal";
 
-const DESTINATIONS = [
-    {img: ciri, 
-     title: 'TITULO',
-     text:'Lorem ipsum dolor sit amet consectetur, adipisicing elit. nem iste doloremque laborum obcaecati harum? Officiis?'},
-    {img: ciri, 
-     title: 'TITULO',
-     text:'Lorem ipsum dolor sit amet consectetur, adipisicing elit. nem iste doloremque laborum obcaecati harum? Officiis?'},
-    {img: ciri, 
-     title: 'TITULO',
-     text:'Lorem ipsum dolor sit amet consectetur, adipisicing elit. nem iste doloremque laborum obcaecati harum? Officiis?'},
-    {img: ciri, 
-     title: 'TITULO',
-     text:'Lorem ipsum dolor sit amet consectetur, adipisicing elit. nem iste doloremque laborum obcaecati harum? Officiis?'},
-]
+Modal.setAppElement("#root");
 
-const Card = () => {
-    return(
+const Card = ({ DESTINATIONS }) => {
+    const [modalOpen, setModalOpen] = useState(false);
+
+    function handleModalOpen() {
+        setModalOpen(true);
+    }
+
+    function handleModalClose() {
+        setModalOpen(false);
+    }
+
+    return (
         <div className="card__container">
-            <img src={DESTINATIONS[0].img} alt="" />
-            <div className="card__container-content">
-                <h2>{DESTINATIONS[0].title}</h2>
-                <p>{DESTINATIONS[0].text}</p>
-                <Button></Button>
-                {console.log(DESTINATIONS)}
+            <div id="OpenModal" onClick={handleModalOpen}>
+                <img src={DESTINATIONS.img} alt="Imagem de viagem" />
+                <div className="card__container-content">
+                    <h2>{DESTINATIONS.title}</h2>
+                    <p>{DESTINATIONS.text}</p>
+                </div>
             </div>
+            <Button></Button>
+
+            <DestinationsModal
+                isOpen={modalOpen}
+                onRequestClose={handleModalClose}
+            />
         </div>
-        
-    )
-}
+    );
+};
 
 export default Card;
