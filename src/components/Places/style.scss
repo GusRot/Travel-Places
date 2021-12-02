@@ -1,10 +1,8 @@
-@import '../../styles/colors';
+@import "../../styles/colors";
 
 .places {
-
     &__container {
         width: 100%;
-        
     }
 
     &__content {
@@ -13,14 +11,14 @@
         margin-bottom: 3rem;
 
         h2 {
-                font-size: 3.6rem;
-                font-weight: 700;
-                color: $green;
-                margin-right: 15%;
+            font-size: 3.6rem;
+            font-weight: 700;
+            color: $green;
+            margin-right: 15%;
 
-                span {
-                    color: $black;
-                }
+            span {
+                color: $black;
+            }
         }
 
         &-select {
@@ -34,7 +32,7 @@
             h5 {
                 font-size: 1.8rem;
                 font-weight: 500;
-                color: #706D6D;
+                color: #706d6d;
                 width: 11rem;
             }
 
@@ -49,45 +47,39 @@
     }
 }
 
+@media (max-width: 530px) {
+    .places {
+        &__content-select {
+            flex-direction: column;
+            gap: 0;
+            justify-content: end;
+        }
 
-    @media(max-width: 530px) {
-
-        .places{
-            
-            &__content-select {
-                flex-direction: column;
-                gap: 0;
-                justify-content: end;
-            }
-            
-            &__content h2 {
-                margin-right: 4%;
-                font-size: 3rem;
-            }
+        &__content h2 {
+            margin-right: 4%;
+            font-size: 3rem;
         }
     }
+}
 
-    @media(max-width: 320px) {
+@media (max-width: 320px) {
+    .places {
+        &__content {
+            flex-direction: column;
+            justify-content: center;
+            align-items: baseline;
+            width: 100%;
 
-        .places{
-            
-            &__content {
-                flex-direction: column;
-                justify-content: center;
-                align-items: baseline;
+            h2 {
+                margin-right: 0;
+            }
+        }
+
+        &-select {
+            h5 {
                 width: 100%;
-
-                h2 {
-                    margin-right: 0;
-                }
-            }
-
-            &-select {
-    
-                h5 {
-                    width: 100%;
-                    padding: 0;
-                }
+                padding: 0;
             }
         }
     }
+}

@@ -1,22 +1,22 @@
 import React from "react";
-import './style.scss';
-import acessabr from '../../assets/acessabr.svg'
-import ebac from '../../assets/ebac.svg'
+import "./style.scss";
+import acessabr from "../../assets/acessabr.svg";
+import ebac from "../../assets/ebac.svg";
 
 const Header = () => {
-    return(
+    return (
         <header className="header__container">
             <div className="header__logo--state">
-                <img src={acessabr}></img>
+                <img src={acessabr} alt="Logo"></img>
                 <span>/</span>
                 <p>Caruaru - PE</p>
             </div>
             <div className="header__logo--logo">
                 <span>apoio:</span>
-                <img src={ebac}></img>
+                <img src={ebac} alt="Logo"></img>
             </div>
         </header>
-    )
-}
+    );
+};
 
 export default Header;

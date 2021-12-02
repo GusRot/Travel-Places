@@ -1,52 +1,40 @@
-import React from "react";
+import React, { useContext } from "react";
 import Card from "../Card";
-import ciri from "../../assets/Nova pasta/Ciri.jpg";
-import SwiperCore, { Navigation, Scrollbar, A11y } from "swiper";
+import SwiperCore, {
+    Navigation,
+    Scrollbar,
+    A11y,
+    Autoplay,
+    Keyboard,
+    Mousewheel,
+} from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper-bundle.css";
+import "./style.scss";
+import { DestinationsContext } from "../../ModalContext";
 
-SwiperCore.use([Navigation, Scrollbar, A11y]);
-
-const Destinations = [
-    {
-        img: ciri,
-        title: "TITULO",
-        text: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. nem iste doloremque laborum obcaecati harum? Officiis?",
-    },
-    {
-        img: ciri,
-        title: "TITULO",
-        text: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. nem iste doloremque laborum obcaecati harum? Officiis?",
-    },
-    {
-        img: ciri,
-        title: "TITULO",
-        text: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. nem iste doloremque laborum obcaecati harum? Officiis?",
-    },
-    {
-        img: ciri,
-        title: "TITULO",
-        text: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. nem iste doloremque laborum obcaecati harum? Officiis?",
-    },
-    {
-        img: ciri,
-        title: "TITULO",
-        text: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. nem iste doloremque laborum obcaecati harum? Officiis?",
-    },
-    {
-        img: ciri,
-        title: "TITULO",
-        text: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. nem iste doloremque laborum obcaecati harum? Officiis?",
-    },
-];
+SwiperCore.use([Navigation, Scrollbar, A11y, Autoplay, Keyboard, Mousewheel]);
 
 function Slider() {
+    const { modalOpen } = useContext(DestinationsContext);
+    const { Destinations } = useContext(DestinationsContext);
+
     return (
         <Swiper
+            className={`swiper-container ${
+                modalOpen ? "swiper-container-active" : ""
+            }`}
+            loop={true}
+            mousewheel={true}
+            keyboard={true}
             modules={[Navigation, Scrollbar, A11y]}
             navigation={{ clickable: true }}
             scrollbar={{ draggable: true }}
             slidesPerView={1}
+            autoplay={{
+                delay: 10000,
+                disableOnInteraction: false,
+            }}
             breakpoints={{
                 600: {
                     slidesPerView: 2,

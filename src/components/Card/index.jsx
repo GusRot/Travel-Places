@@ -1,21 +1,16 @@
-import React, { useState } from "react";
+import React, { useContext } from "react";
 import "./style.scss";
 import Button from "../Button";
 import Modal from "react-modal";
 import DestinationsModal from "../DestinationsModal";
+import { DestinationsContext } from "../../ModalContext";
 
 Modal.setAppElement("#root");
 
 const Card = ({ DESTINATIONS }) => {
-    const [modalOpen, setModalOpen] = useState(false);
-
-    function handleModalOpen() {
-        setModalOpen(true);
-    }
-
-    function handleModalClose() {
-        setModalOpen(false);
-    }
+    const { handleModalOpen } = useContext(DestinationsContext);
+    const { modalOpen } = useContext(DestinationsContext);
+    const { handleModalClose } = useContext(DestinationsContext);
 
     return (
         <div className="card__container">

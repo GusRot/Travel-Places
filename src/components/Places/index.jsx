@@ -1,12 +1,15 @@
 import React from "react";
-import Slider from '../Slider';
-import './style.scss';
+import Slider from "../Slider";
+import "./style.scss";
+import { ModalContext } from "../../ModalContext";
 
 const Places = () => {
-    return(
+    return (
         <div className="places__container">
             <div className="places__content">
-                <h2>Parques <span>Acessiveis</span></h2>
+                <h2>
+                    Parques <span>Acessiveis</span>
+                </h2>
                 <div className="places__content-select">
                     <h5>Ordenar por:</h5>
                     <select>
@@ -15,10 +18,11 @@ const Places = () => {
                     </select>
                 </div>
             </div>
-
-            <Slider/>
+            <ModalContext>
+                <Slider />
+            </ModalContext>
         </div>
-    )
-}
+    );
+};
 
 export default Places;
