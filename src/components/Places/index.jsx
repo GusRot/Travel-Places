@@ -7,9 +7,9 @@ const Places = () => {
         <div className="places__container">
             <div className="places__content">
                 <h2>
-                    Parques <span>Acessiveis</span>
+                    Destinos <span>Recomendados</span>
                 </h2>
-                <div className="places__content-select">
+                <div className="places__content-select" id="Content">
                     <h5>Ordenar por:</h5>
                     <select>
                         <option>Distancia</option>

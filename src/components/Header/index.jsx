@@ -1,19 +1,26 @@
 import React from "react";
 import "./style.scss";
-import acessabr from "../../assets/acessabr.svg";
-import ebac from "../../assets/ebac.svg";
+import lifeImg from "../../assets/life.png";
+import logoImg from "../../assets/logo.jpg";
 
 const Header = () => {
     return (
         <header className="header__container">
             <div className="header__logo--state">
-                <img src={acessabr} alt="Logo"></img>
+                <a href="#Content">
+                    <img src={lifeImg} alt="Logo"></img>
+                </a>
                 <span>/</span>
-                <p>Caruaru - PE</p>
+                <p>Nordeste - BR</p>
             </div>
             <div className="header__logo--logo">
-                <span>apoio:</span>
-                <img src={ebac} alt="Logo"></img>
+                <span>Desenvolvido:</span>
+                <a
+                    href="https://www.linkedin.com/in/gustavo-rotta-6447b0163/"
+                    target="_blank"
+                >
+                    <img src={logoImg} alt="Logo"></img>
+                </a>
             </div>
         </header>
     );

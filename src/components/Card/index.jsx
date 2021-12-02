@@ -15,10 +15,14 @@ const Card = ({ DESTINATIONS }) => {
     return (
         <div className="card__container">
             <div id="OpenModal" onClick={handleModalOpen}>
-                <img src={DESTINATIONS.img} alt="Imagem de viagem" />
+                <img src={DESTINATIONS.img[0]} alt="Imagem de viagem" />
                 <div className="card__container-content">
-                    <h2>{DESTINATIONS.title}</h2>
-                    <p>{DESTINATIONS.text}</p>
+                    <div className="card__container-title">
+                        <h2>{DESTINATIONS.title}</h2>
+                    </div>
+                    <div className="card__container-text">
+                        <p>{DESTINATIONS.text}</p>
+                    </div>
                 </div>
             </div>
             <Button
@@ -26,7 +30,9 @@ const Card = ({ DESTINATIONS }) => {
                     console.log("ok");
                 }}
             >
-                Como Chegar
+                <a href={DESTINATIONS.url} target="_blank">
+                    Como Chegar
+                </a>
             </Button>
 
             <DestinationsModal

@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from "react";
 import "./style.scss";
-import pexels from "../../assets/pexels.png";
+import debronImg from "../../assets/debron.jpg";
 import Pills from "../../components/Pills";
 import { DestinationsContext } from "../../ModalContext";
 
@@ -13,8 +13,9 @@ const Home = () => {
     useEffect(() => {
         for (let i = 0; i < Destinations.length; i++) {
             if (
-                Destinations[i].category !== selectedPill &&
-                selectedPill !== "Todos"
+                Destinations[i].category[0] !== selectedPill &&
+                selectedPill !== "Todos" &&
+                Destinations[i].category[1] !== selectedPill
             ) {
                 Destinations[i].filter = "none";
             } else {
@@ -25,18 +26,27 @@ const Home = () => {
     }, [selectedPill, Destinations]);
 
     return (
-        <div className="home__container">
+        <div className="home__container" id="Home">
             <div className="home__content">
-                <h1>Caruaru para todos</h1>
+                <h1>Recordar é viver</h1>
                 <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Cum, perspiciatis accusantium! Saepe ad, optio sequi
-                    incidunt ipsam itaque rem minima, sit at quaerat, mollitia
-                    recusandae quo et adipisci enim eaque?
+                    Nunca fui de tirar muitas fotos, realizando este projeto que
+                    percebi o quanto é interessante ter recordações visuais de
+                    momentos passados. Uma pena que muitos lugares não tive
+                    fotos boas para colocar aqui
                 </p>
                 <p>
-                    Lorem ipsum dolorem minima, sit at quaerat, mollitia
-                    recusandae quo et adipisci enim eaque?
+                    Você vai encontrar abaixo alguns lugares muito bons para
+                    você conhecer. Lugares que eu conheci e indico para qualquer
+                    pessoa ir pelo menos uma vez na vida.
+                </p>
+                <p>
+                    Se você está com dúvidas de qual será sua próxima viagem...
+                    espero que eu possa te ajudar :D
+                </p>
+                <p>
+                    Sou um Paulista morando em Pernambuco, então aqui o foco vai
+                    ser no Nordeste, beleza?
                 </p>
                 <div className="home__pills">
                     {Places.map((item) => (
@@ -50,7 +60,12 @@ const Home = () => {
                 </div>
             </div>
             <div className="home__img">
-                <img src={pexels} alt="" />
+                <img src={debronImg} alt="" />
+                <span>
+                    <a href="http://www.debronbier.com.br/" target="_blank">
+                        Cervejaria Debron - Recife(PE)
+                    </a>
+                </span>
             </div>
         </div>
     );

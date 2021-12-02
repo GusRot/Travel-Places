@@ -7,8 +7,21 @@
 
         img {
             width: 20rem;
+            height: 20rem;
+            object-fit: cover;
+            object-position: 35% 50%;
             border-radius: 1rem;
-            margin-bottom: 2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        &-title {
+            height: 4rem;
+            display: flex;
+            align-items: center;
+        }
+
+        &-text {
+            height: 10rem;
         }
 
         &-content {
@@ -19,7 +32,7 @@
             height: 20rem;
 
             h2 {
-                font-size: 2.3rem;
+                font-size: 2rem;
                 font-weight: 700;
                 text-align: start;
                 line-height: 2.7rem;
@@ -27,10 +40,15 @@
 
             p {
                 line-height: 2.1rem;
-                font-size: 1.8rem;
+                font-size: 1.6rem;
                 text-align: justify;
                 color: black;
             }
+        }
+
+        a {
+            text-decoration: none;
+            color: $blue;
         }
     }
 }

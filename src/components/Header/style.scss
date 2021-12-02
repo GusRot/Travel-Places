@@ -1,4 +1,4 @@
-@import '../../styles/colors';
+@import "../../styles/colors";
 
 header {
     height: 8rem;
@@ -8,7 +8,6 @@ header {
 }
 
 .header__ {
-
     &container {
         height: 8rem;
         background-color: $white;
@@ -22,12 +21,17 @@ header {
     }
 
     &logo-- {
-
         &state {
             display: flex;
             align-items: center;
-            gap: 1.5rem;
+            gap: 1rem;
             font-size: 1.8rem;
+
+            img {
+                height: 2.8rem;
+                object-fit: scale-down;
+                cursor: pointer;
+            }
         }
 
         &logo {
@@ -35,25 +39,24 @@ header {
             display: flex;
             gap: 1.2rem;
             align-items: baseline;
+
+            img {
+                border-radius: 50%;
+            }
         }
     }
-
 }
 
-@media(max-width: 1024px) {
-
+@media (max-width: 1024px) {
     header {
         width: 95%;
-
     }
-
 }
 
-@media(max-width: 756px) {
-
-    header{ 
+@media (max-width: 756px) {
+    header {
         height: 6rem;
-    
+
         .header__container {
             height: 6rem;
         }
@@ -62,9 +65,9 @@ header {
             height: 30px;
         }
 
-        .header__logo--state{
+        .header__logo--state {
             flex-direction: column;
-            gap:0;
+            gap: 0;
 
             img {
                 height: 15px;
