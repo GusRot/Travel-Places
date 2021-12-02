@@ -1,20 +1,29 @@
-import React, { useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import "./style.scss";
 import pexels from "../../assets/pexels.png";
 import Pills from "../../components/Pills";
-
-const PLACES = [
-    "Praca",
-    "Parque",
-    "Camping",
-    "Restaurante",
-    "Pontos Turisticos",
-    "Loja",
-    "Essenciais",
-];
+import { DestinationsContext } from "../../ModalContext";
 
 const Home = () => {
-    const [selectedPill, setSelectedPill] = useState("");
+    const [selectedPill, setSelectedPill] = useState("Todos");
+
+    const { Destinations } = useContext(DestinationsContext);
+    const { Places } = useContext(DestinationsContext);
+
+    useEffect(() => {
+        for (let i = 0; i < Destinations.length; i++) {
+            if (
+                Destinations[i].category !== selectedPill &&
+                selectedPill !== "Todos"
+            ) {
+                Destinations[i].filter = "none";
+            } else {
+                Destinations[i].filter = "show";
+            }
+        }
+        console.log(Destinations);
+    }, [selectedPill, Destinations]);
+
     return (
         <div className="home__container">
             <div className="home__content">
@@ -30,11 +39,12 @@ const Home = () => {
                     recusandae quo et adipisci enim eaque?
                 </p>
                 <div className="home__pills">
-                    {PLACES.map((item) => (
+                    {Places.map((item) => (
                         <Pills
+                            key={item}
                             local={item}
-                            selected={selectedPill === item}
                             onClick={() => setSelectedPill(item)}
+                            selected={selectedPill === item}
                         />
                     ))}
                 </div>

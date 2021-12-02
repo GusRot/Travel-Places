@@ -2,9 +2,10 @@ import React from "react";
 import "./style.scss";
 import PropTypes from "prop-types";
 
-const Pills = ({ local, onClick, selected }) => {
+const Pills = ({ keys, local, onClick, selected }) => {
     return (
         <div
+            key={keys}
             onClick={onClick}
             className={`pills__container ${
                 selected ? "pills__container-active" : ""

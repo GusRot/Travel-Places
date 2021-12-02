@@ -24,7 +24,7 @@
         &-select {
             display: flex;
             gap: 1rem;
-            align-items: end;
+            align-items: flex-end;
             border-bottom: 1px solid black;
             padding: 0 1.5rem;
             line-height: 2.1rem;
@@ -52,7 +52,7 @@
         &__content-select {
             flex-direction: column;
             gap: 0;
-            justify-content: end;
+            justify-content: flex-end;
         }
 
         &__content h2 {

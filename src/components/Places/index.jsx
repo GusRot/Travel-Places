@@ -1,7 +1,6 @@
 import React from "react";
 import Slider from "../Slider";
 import "./style.scss";
-import { ModalContext } from "../../ModalContext";
 
 const Places = () => {
     return (
@@ -18,9 +17,7 @@ const Places = () => {
                     </select>
                 </div>
             </div>
-            <ModalContext>
-                <Slider />
-            </ModalContext>
+            <Slider />
         </div>
     );
 };

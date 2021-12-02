@@ -1,18 +1,18 @@
 import React from "react";
-import './style.scss';
-import PropTypes from 'prop-types';
+import "./style.scss";
+import PropTypes from "prop-types";
 
-const Button = () => {
+const Button = ({ children, onClick }) => {
     return (
-        <button className="button">
-            Como Chegar
+        <button className="button" onClick={onClick}>
+            {children}
         </button>
-    )
-}
+    );
+};
 
 Button.propTypes = {
     children: PropTypes.string.isRequired,
-    onClick: PropTypes.func.isRequired
-}
+    onClick: PropTypes.func.isRequired,
+};
 
 export default Button;

@@ -8,38 +8,57 @@ export function ModalContext(props) {
     const Destinations = [
         {
             img: ciri,
-            title: "TITULO",
+            title: "Camping",
             text: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. nem iste doloremque laborum obcaecati harum? Officiis?",
-            filter: "text",
+            category: "Camping",
+            filter: "show",
         },
         {
             img: ciri,
-            title: "TITULO",
+            title: "Camping",
             text: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. nem iste doloremque laborum obcaecati harum? Officiis?",
-            filter: "text",
+            category: "Camping",
+            filter: "show",
         },
         {
             img: ciri,
-            title: "TITULO",
+            title: "Restaurante",
             text: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. nem iste doloremque laborum obcaecati harum? Officiis?",
-            filter: "text",
+            category: "Restaurante",
+            filter: "show",
         },
         {
             img: ciri,
-            title: "TITULO",
+            title: "Restaurante",
             text: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. nem iste doloremque laborum obcaecati harum? Officiis?",
-            filter: "text",
+            category: "Restaurante",
+            filter: "show",
         },
         {
             img: ciri,
-            title: "TITULO",
+            title: "Parque",
             text: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. nem iste doloremque laborum obcaecati harum? Officiis?",
+            category: "Parque",
+            filter: "show",
         },
         {
             img: ciri,
-            title: "TITULO",
+            title: "Loja",
             text: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. nem iste doloremque laborum obcaecati harum? Officiis?",
+            category: "Loja",
+            filter: "show",
         },
+    ];
+
+    const Places = [
+        "Todos",
+        "Praca",
+        "Parque",
+        "Camping",
+        "Restaurante",
+        "Pontos Turisticos",
+        "Loja",
+        "Essenciais",
     ];
 
     function handleModalOpen() {
@@ -57,6 +76,7 @@ export function ModalContext(props) {
                 handleModalOpen,
                 handleModalClose,
                 Destinations,
+                Places,
             }}
         >
             {props.children}

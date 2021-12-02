@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import Card from "../Card";
 import SwiperCore, {
     Navigation,
@@ -19,12 +19,16 @@ function Slider() {
     const { modalOpen } = useContext(DestinationsContext);
     const { Destinations } = useContext(DestinationsContext);
 
+    const [rerender, setRerender] = useState(1);
+    useEffect(() => {
+        setRerender((rerender) => rerender + 1);
+    }, [Destinations, rerender]);
+
     return (
         <Swiper
             className={`swiper-container ${
                 modalOpen ? "swiper-container-active" : ""
             }`}
-            loop={true}
             mousewheel={true}
             keyboard={true}
             modules={[Navigation, Scrollbar, A11y]}
@@ -47,11 +51,17 @@ function Slider() {
                 },
             }}
         >
-            {Destinations.map((Destinations, index) => (
-                <SwiperSlide key={index + "sdsd"}>
-                    <Card DESTINATIONS={Destinations} />
-                </SwiperSlide>
-            ))}
+            {Destinations.map((Destinations, index) => {
+                if (Destinations.filter === "show" && rerender > 0) {
+                    return (
+                        <SwiperSlide key={index + "sdsd"}>
+                            <Card DESTINATIONS={Destinations} />
+                        </SwiperSlide>
+                    );
+                } else {
+                    return <div></div>;
+                }
+            })}
         </Swiper>
     );
 }

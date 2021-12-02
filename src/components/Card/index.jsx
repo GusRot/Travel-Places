@@ -21,7 +21,13 @@ const Card = ({ DESTINATIONS }) => {
                     <p>{DESTINATIONS.text}</p>
                 </div>
             </div>
-            <Button></Button>
+            <Button
+                onClick={() => {
+                    console.log("ok");
+                }}
+            >
+                Como Chegar
+            </Button>
 
             <DestinationsModal
                 isOpen={modalOpen}
