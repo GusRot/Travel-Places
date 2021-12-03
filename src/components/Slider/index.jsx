@@ -21,6 +21,7 @@ function Slider() {
     const { Destinations } = useContext(DestinationsContext);
     const [render, setRender] = useState(0);
     const [test, setTest] = useState(0);
+    const [destinations, setDestinations] = useState([]);
 
     useEffect(() => {
         callRender();
@@ -43,6 +44,7 @@ function Slider() {
     }
 
     useEffect(() => {
+        setDestinations(Destinations);
         setTest(1);
     }, [render, test]);
 
@@ -73,11 +75,11 @@ function Slider() {
                 },
             }}
         >
-            {Destinations.map((destinations, index) => {
-                if (destinations.filter === "show") {
+            {destinations.map((destination, index) => {
+                if (destination.filter === "show") {
                     return (
                         <SwiperSlide key={index + "heuf"}>
-                            <Card DESTINATIONS={destinations} />
+                            <Card DESTINATIONS={destination} index={index} />
                         </SwiperSlide>
                     );
                 } else {

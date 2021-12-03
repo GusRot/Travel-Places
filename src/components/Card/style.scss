@@ -5,6 +5,10 @@
         width: 20rem;
         margin-bottom: 6rem;
 
+        &:first-child {
+            cursor: pointer;
+        }
+
         img {
             width: 20rem;
             height: 20rem;
@@ -51,8 +55,4 @@
             color: $blue;
         }
     }
-}
-
-#OpenModal {
-    cursor: pointer;
 }
