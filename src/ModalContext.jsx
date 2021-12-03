@@ -1,4 +1,4 @@
-import { createContext, useState } from "react";
+import { createContext, useEffect, useState } from "react";
 import bonitoImg2 from "./assets/camping/bonito.jpg";
 import bonitoImg from "./assets/camping/bonitoTirolesa.jpg";
 import jpImg from "./assets/camping/JPBarraca.jpg";
@@ -17,6 +17,8 @@ export const DestinationsContext = createContext({});
 
 export function ModalContext(props) {
     const [modalOpen, setModalOpen] = useState(false);
+    const [rerender, setRerender] = useState("Todos");
+
     const Destinations = [
         {
             img: [bonitoImg, bonitoImg2],
@@ -93,6 +95,11 @@ export function ModalContext(props) {
         setModalOpen(false);
     }
 
+    function rerenderCards(selectedPill) {
+        setRerender(selectedPill);
+        console.log(2);
+    }
+
     return (
         <DestinationsContext.Provider
             value={{
@@ -101,6 +108,8 @@ export function ModalContext(props) {
                 handleModalClose,
                 Destinations,
                 Places,
+                rerenderCards,
+                rerender,
             }}
         >
             {props.children}

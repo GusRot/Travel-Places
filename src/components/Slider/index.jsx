@@ -17,12 +17,38 @@ SwiperCore.use([Navigation, Scrollbar, A11y, Autoplay, Keyboard, Mousewheel]);
 
 function Slider() {
     const { modalOpen } = useContext(DestinationsContext);
+    const { rerender } = useContext(DestinationsContext);
     const { Destinations } = useContext(DestinationsContext);
+    const [destinations, setDestinations] = useState([]);
+    const [render, setRender] = useState(0);
+    const [test, setTest] = useState(0);
 
-    const [rerender, setRerender] = useState(1);
     useEffect(() => {
-        setRerender((rerender) => rerender + 1);
-    }, [Destinations, rerender]);
+        callRender();
+        setRender(Math.random());
+    }, [rerender]);
+
+    function callRender() {
+        for (let i = 0; i < Destinations.length; i++) {
+            if (
+                Destinations[i].category[0] !== rerender &&
+                rerender !== "Todos" &&
+                Destinations[i].category[1] !== rerender
+            ) {
+                Destinations[i].filter = "none";
+            } else {
+                Destinations[i].filter = "show";
+            }
+        }
+        setTest(0);
+    }
+
+    useEffect(() => {
+        console.log(4);
+        setTest(1);
+        setDestinations(Destinations);
+        console.log(destinations);
+    }, [render, test]);
 
     return (
         <Swiper
@@ -51,11 +77,14 @@ function Slider() {
                 },
             }}
         >
-            {Destinations.map((Destinations, index) => {
-                if (Destinations.filter === "show" && rerender > 0) {
+            {Destinations.map((destinations, index) => {
+                if (destinations.filter === "show") {
                     return (
-                        <SwiperSlide key={index + "sdsd"}>
-                            <Card DESTINATIONS={Destinations} />
+                        <SwiperSlide>
+                            <Card
+                                DESTINATIONS={destinations}
+                                key={rerender + index}
+                            />
                         </SwiperSlide>
                     );
                 } else {

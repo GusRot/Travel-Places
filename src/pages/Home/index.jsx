@@ -7,23 +7,13 @@ import { DestinationsContext } from "../../ModalContext";
 const Home = () => {
     const [selectedPill, setSelectedPill] = useState("Todos");
 
-    const { Destinations } = useContext(DestinationsContext);
+    const { rerenderCards } = useContext(DestinationsContext);
     const { Places } = useContext(DestinationsContext);
 
     useEffect(() => {
-        for (let i = 0; i < Destinations.length; i++) {
-            if (
-                Destinations[i].category[0] !== selectedPill &&
-                selectedPill !== "Todos" &&
-                Destinations[i].category[1] !== selectedPill
-            ) {
-                Destinations[i].filter = "none";
-            } else {
-                Destinations[i].filter = "show";
-            }
-        }
-        console.log(Destinations);
-    }, [selectedPill, Destinations]);
+        console.log(1);
+        rerenderCards(selectedPill);
+    }, [selectedPill]);
 
     return (
         <div className="home__container" id="Home">
