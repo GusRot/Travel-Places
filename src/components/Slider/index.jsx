@@ -17,23 +17,22 @@ SwiperCore.use([Navigation, Scrollbar, A11y, Autoplay, Keyboard, Mousewheel]);
 
 function Slider() {
     const { modalOpen } = useContext(DestinationsContext);
-    const { rerender } = useContext(DestinationsContext);
+    const { pillRerender } = useContext(DestinationsContext);
     const { Destinations } = useContext(DestinationsContext);
-    const [destinations, setDestinations] = useState([]);
     const [render, setRender] = useState(0);
     const [test, setTest] = useState(0);
 
     useEffect(() => {
         callRender();
         setRender(Math.random());
-    }, [rerender]);
+    }, [pillRerender]);
 
     function callRender() {
         for (let i = 0; i < Destinations.length; i++) {
             if (
-                Destinations[i].category[0] !== rerender &&
-                rerender !== "Todos" &&
-                Destinations[i].category[1] !== rerender
+                Destinations[i].category[0] !== pillRerender &&
+                pillRerender !== "Todos" &&
+                Destinations[i].category[1] !== pillRerender
             ) {
                 Destinations[i].filter = "none";
             } else {
@@ -44,10 +43,7 @@ function Slider() {
     }
 
     useEffect(() => {
-        console.log(4);
         setTest(1);
-        setDestinations(Destinations);
-        console.log(destinations);
     }, [render, test]);
 
     return (
@@ -80,15 +76,12 @@ function Slider() {
             {Destinations.map((destinations, index) => {
                 if (destinations.filter === "show") {
                     return (
-                        <SwiperSlide>
-                            <Card
-                                DESTINATIONS={destinations}
-                                key={rerender + index}
-                            />
+                        <SwiperSlide key={index + "heuf"}>
+                            <Card DESTINATIONS={destinations} />
                         </SwiperSlide>
                     );
                 } else {
-                    return <div></div>;
+                    return <div key={index + "heu"}></div>;
                 }
             })}
         </Swiper>

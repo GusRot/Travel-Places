@@ -7,13 +7,13 @@ import { DestinationsContext } from "../../ModalContext";
 
 Modal.setAppElement("#root");
 
-const Card = ({ DESTINATIONS, key }) => {
+const Card = ({ DESTINATIONS }) => {
     const { handleModalOpen } = useContext(DestinationsContext);
     const { modalOpen } = useContext(DestinationsContext);
     const { handleModalClose } = useContext(DestinationsContext);
 
     return (
-        <div className="card__container" key={key}>
+        <div className="card__container">
             <div id="OpenModal" onClick={handleModalOpen}>
                 <img src={DESTINATIONS.img[0]} alt="Imagem de viagem" />
                 <div className="card__container-content">
@@ -26,7 +26,7 @@ const Card = ({ DESTINATIONS, key }) => {
                 </div>
             </div>
             <Button onClick={() => {}}>
-                <a href={DESTINATIONS.url} target="_blank">
+                <a href={DESTINATIONS.url} target="_blank" rel="noreferrer">
                     Como Chegar
                 </a>
             </Button>

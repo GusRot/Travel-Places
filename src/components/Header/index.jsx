@@ -18,6 +18,7 @@ const Header = () => {
                 <a
                     href="https://www.linkedin.com/in/gustavo-rotta-6447b0163/"
                     target="_blank"
+                    rel="noreferrer"
                 >
                     <img src={logoImg} alt="Logo"></img>
                 </a>

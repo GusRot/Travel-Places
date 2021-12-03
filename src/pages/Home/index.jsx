@@ -7,13 +7,12 @@ import { DestinationsContext } from "../../ModalContext";
 const Home = () => {
     const [selectedPill, setSelectedPill] = useState("Todos");
 
-    const { rerenderCards } = useContext(DestinationsContext);
+    const { pillRerenderCards } = useContext(DestinationsContext);
     const { Places } = useContext(DestinationsContext);
 
     useEffect(() => {
-        console.log(1);
-        rerenderCards(selectedPill);
-    }, [selectedPill]);
+        pillRerenderCards(selectedPill);
+    }, [selectedPill, pillRerenderCards]);
 
     return (
         <div className="home__container" id="Home">
@@ -52,7 +51,11 @@ const Home = () => {
             <div className="home__img">
                 <img src={debronImg} alt="" />
                 <span>
-                    <a href="http://www.debronbier.com.br/" target="_blank">
+                    <a
+                        href="http://www.debronbier.com.br/"
+                        target="_blank"
+                        rel="noreferrer"
+                    >
                         Cervejaria Debron - Recife(PE)
                     </a>
                 </span>
