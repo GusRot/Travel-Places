@@ -106,7 +106,6 @@ export function ModalContext(props) {
     function handleModalOpen(index) {
         setModalOpen(true);
         setModalObject(Destinations[index]);
-        console.log(modalObject);
     }
 
     function handleModalClose() {

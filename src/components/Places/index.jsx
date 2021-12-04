@@ -9,13 +9,13 @@ const Places = () => {
                 <h2>
                     Destinos <span>Recomendados</span>
                 </h2>
-                <div className="places__content-select" id="Content">
+                {/* <div className="places__content-select" id="Content">
                     <h5>Ordenar por:</h5>
                     <select>
                         <option>Distancia</option>
                         <option>Alfabeto</option>
                     </select>
-                </div>
+                </div> */}
             </div>
             <Slider />
         </div>
