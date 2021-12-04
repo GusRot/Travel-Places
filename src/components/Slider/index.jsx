@@ -24,11 +24,6 @@ function Slider() {
     const [destinations, setDestinations] = useState([]);
 
     useEffect(() => {
-        callRender();
-        setRender(Math.random());
-    }, [pillRerender]);
-
-    function callRender() {
         for (let i = 0; i < Destinations.length; i++) {
             if (
                 Destinations[i].category[0] !== pillRerender &&
@@ -41,12 +36,13 @@ function Slider() {
             }
         }
         setTest(0);
-    }
+        setRender(Math.random());
+    }, [pillRerender, Destinations]);
 
     useEffect(() => {
         setDestinations(Destinations);
         setTest(1);
-    }, [render, test]);
+    }, [render, test, Destinations]);
 
     return (
         <Swiper
