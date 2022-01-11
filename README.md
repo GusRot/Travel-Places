@@ -1,6 +1,6 @@
 Viajar é sempre bom, e o objetivo desse projeto é te inspirar para as suas próximas viagens
 
-[Acesse aqui](travel-places.vercel.app) para visualizar o build do projeto
+[Acesse link aqui] (travel-places.vercel.app) para visualizar o build do projeto
 
 Aprendizados: Esse projeto utilizou bastante dos hooks do react e de context api que me ajudaram a aprimorar estes conhecimentos e utilizá-los da melhor forma.
 
