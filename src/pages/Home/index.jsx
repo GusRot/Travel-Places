@@ -1,6 +1,5 @@
 import React, { useContext, useEffect, useState } from "react";
 import "./style.scss";
-import debronImg from "../../assets/debron.jpg";
 import Pills from "../../components/Pills";
 import { DestinationsContext } from "../../ModalContext";
 
@@ -49,7 +48,7 @@ const Home = () => {
                 </div>
             </div>
             <div className="home__img">
-                <img src={debronImg} alt="" />
+                <img src={`https://bn02pap001files.storage.live.com/y4m1WcjAqC64zn2B8mIrnr1sgrT-THBt9jiQJPKdSwbPRL4wPyNNh_f5FXLAhTNoq4zcMga5VVQOhrebc25OukaPL-aF6rYd3FGJj2irvEFZP_hP2JzI_Yn0JGDo8syaXjYi6_SY_w6PMUp2YywzkERWSBxMibLtHTCgVWl8_RH8A-UXA-NGRhEIKGddxgO068D?width=948&height=989&cropmode=none`} alt="ImgDebron" />
                 <span>
                     <a
                         href="http://www.debronbier.com.br/"

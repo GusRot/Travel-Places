@@ -1,6 +1,5 @@
 import React from "react";
 import "./style.scss";
-import gustavoImg from "../../assets/perfil.png";
 
 const Curator = () => {
     const telefone = 558197359190;
@@ -18,7 +17,7 @@ const Curator = () => {
                     rel="noreferrer"
                 >
                     <img
-                        src={gustavoImg}
+                        src={`https://bn02pap001files.storage.live.com/y4mnGBF8n2pr5k3m2jdr3fCS26P4o06xXYmPYDEwehlnA8nXFxijj9TwBVZroYh442C5liEDs8ipwhDsvFNuC26vs4ULro7DmL16LbIxNqwNpb8owzZF3j-VPgHxIZvW2qqsYDYgJc113B6kRW_uNFJ80mOEF5E5swqiwAzq-lVtON_SeMa-H2lLPUugp5bUyAj?width=203&height=203&cropmode=none`}
                         alt="Imagem de Gustavo com link para o GitHub"
                     />
                 </a>

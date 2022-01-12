@@ -1,25 +1,14 @@
 import { createContext, useState } from "react";
-import bonitoImg2 from "./assets/camping/bonito.jpg";
-import bonitoImg from "./assets/camping/bonitoTirolesa.jpg";
-import jpImg from "./assets/camping/JPBarraca.jpg";
-import jpImg2 from "./assets/camping/JPCamping.jpg";
-import caruaruImg from "./assets/paisagens/Caruaru.jpg";
-import caruaruImg2 from "./assets/paisagens/Caruaru1.jpg";
-import BAImg from "./assets/paisagens/BAFarol.jpg";
-import BAImg2 from "./assets/paisagens/BAFarol1.jpg";
-import TambabaImg from "./assets/praia/Tambaba.jpg";
-import TambabaImg2 from "./assets/praia/Tambaba1.jpg";
-import BArestImg from "./assets/restaurante/BA.jpg";
-import BArestImg2 from "./assets/restaurante/mercado-modelo.jpg";
-import PErestImg from "./assets/restaurante/PERest.jpg";
-import PErestImg1 from "./assets/restaurante/Armenio.jpg";
 
 export const DestinationsContext = createContext({});
 
 export function ModalContext(props) {
     const [modalOpen, setModalOpen] = useState(false);
     const [modalObject, setModalObject] = useState({
-        img: [bonitoImg, bonitoImg2],
+        img: [
+            `https://bn02pap001files.storage.live.com/y4mQnsHp_maoIciS5utaU6jQpfYDOyqebMb9Dql09EbKMh8-vD6_OHXA8VYfjpLpwdMPrJlzmTwtwJyW3igQc1j_xwfQJot1bQtJmEeTWc_1aBZLcMHaWm0Ggb-D6NGxr8FuwjAgtFvFv8RpuRoYa3VDcIHzFGeUKziIX8LmEDagwKNsrA3cQBhCG6O4JKUmUEr?width=960&height=640&cropmode=none`,
+            `https://bn02pap001files.storage.live.com/y4m8AGtN9ywkzmDbHygXCx9wU6C_pcpklZ23ch6vrAHLXbmmqbZiWRJ-Fu5zrefESWTSRkRXaXLo-meie9Ut0SANbliTT0eqTrcqkLlukZZpmFd4WgV2Aa3KFrVCPh9Ub1Yhp9nPLUDgO1bjRQ7Q1Yg30C_p-VCMRtCkRZYPyFzFNchNtEoqw3BX6lQLwpP104K?width=3000&height=4000&cropmode=none`,
+        ],
         title: "Cachoeiras Bonito(PE)",
         text: "Camping da Pousada Vale dos Lagos oferece Camping, Hostel e Pousada para estadia. Localizada no coração das melhores cachoeiras da região",
         category: ["Camping", "Paisagens"],
@@ -30,7 +19,10 @@ export function ModalContext(props) {
 
     const Destinations = [
         {
-            img: [bonitoImg, bonitoImg2],
+            img: [
+                `https://bn02pap001files.storage.live.com/y4mQnsHp_maoIciS5utaU6jQpfYDOyqebMb9Dql09EbKMh8-vD6_OHXA8VYfjpLpwdMPrJlzmTwtwJyW3igQc1j_xwfQJot1bQtJmEeTWc_1aBZLcMHaWm0Ggb-D6NGxr8FuwjAgtFvFv8RpuRoYa3VDcIHzFGeUKziIX8LmEDagwKNsrA3cQBhCG6O4JKUmUEr?width=960&height=640&cropmode=none`,
+                `https://bn02pap001files.storage.live.com/y4m8AGtN9ywkzmDbHygXCx9wU6C_pcpklZ23ch6vrAHLXbmmqbZiWRJ-Fu5zrefESWTSRkRXaXLo-meie9Ut0SANbliTT0eqTrcqkLlukZZpmFd4WgV2Aa3KFrVCPh9Ub1Yhp9nPLUDgO1bjRQ7Q1Yg30C_p-VCMRtCkRZYPyFzFNchNtEoqw3BX6lQLwpP104K?width=3000&height=4000&cropmode=none`,
+            ],
             title: "Cachoeiras Bonito(PE)",
             text: "Camping da Pousada Vale dos Lagos oferece Camping, Hostel e Pousada para estadia. Localizada no coração das melhores cachoeiras da região.",
             modal: "",
@@ -39,7 +31,10 @@ export function ModalContext(props) {
             filter: "show",
         },
         {
-            img: [jpImg, jpImg2],
+            img: [
+                `https://bn02pap001files.storage.live.com/y4mf7ENy1NYMdlQsJKzEecDlBSGWHdP22eu9hPBI0rQwWt7wuMOy1s8JnG1-E08XupG0drGZAXbzN3zcqS_8mt1l8Qz5-IWKjhk7ajS2C1JSEwUfCl79f--EaI2cR70KH-ZKZIoPJPoEjOqxtkdiYIjaFhAavNOuOStgSYEiDJeYqTWDAob9D7wliadS6IyqGJ6?width=3000&height=4000&cropmode=none`,
+                `https://bn02pap001files.storage.live.com/y4mWioewCVDU6hv0Yz5Csv1DXPxIquYikA1Z2udApKB-ea3c0e7M-vMAx1M317Bu1Sex_6ZRbew7jCHt_qvaXzPcsI-kct3FzM8H7zYzkY3cwwlQt4_qqyzJH2L2CJcQXLI6Q_EPMkf7AkNv3ecKBjBObyHwZzW81-IyxYPcMOA1qALAtBQTFNGuTUSzW9oA8V0?width=3000&height=4000&cropmode=none`,
+            ],
             title: "Camping PB",
             text: "A Rota das Trilhas é bem localizada(sul da Paraíba), está entre as melhores praias da região. Otimo convivio com a Natureza.",
             modal: "",
@@ -48,7 +43,10 @@ export function ModalContext(props) {
             filter: "show",
         },
         {
-            img: [caruaruImg, caruaruImg2],
+            img: [
+                `https://bn02pap001files.storage.live.com/y4m_9aZmtPWZg3QYn-JeW_nhMjf_O5XbaB_kpkRhJr4MPh_CI1YeUEWK0yHOOgrWWTEYWFD21C3hiuZYqj2qcuVzKkmUD3TImN1rn3Z6RcABlaSfpEc9rhKuWYeqQQF7kQBj6RN22f4Ku6w7tqYmw4UKPYwfmepfBZdLwjQURmTD0vXvryBuVIn6wNiGxVFodoK?width=4160&height=3120&cropmode=none`,
+                `https://bn02pap001files.storage.live.com/y4m6Kanok7OCEaR-tcviBKfaQ-ZpWY4cNgj5kfrIpGAGahZXaQ7NTG2U64Gqfpf8zyYBySdSe1p_MR56vkF9Di4rLC5-Vs90VKCGxyiRrOW-cUctP7EmejMBVjiFitll5mcGEbbMaOmXH2ADLiFWzywPK3LoG3y6HZSfjW5pB9rxxg5MsYD5ZYIA1ic1aEKQJ5K?width=2910&height=3090&cropmode=none`,
+            ],
             title: "Caruaru(PE)",
             text: "Capital do Forro. Conta com diversas belezas Naturais. Um ponto bastante conhecido e visitado é o Monte Bom Jesus.",
             modal: "",
@@ -57,7 +55,10 @@ export function ModalContext(props) {
             filter: "show",
         },
         {
-            img: [BAImg, BAImg2],
+            img: [
+                `https://bn02pap001files.storage.live.com/y4mcHp2QPajQRPhj5dgRLYUkivzV2anM8AKNzHdku40cxnS7v0xBLIrzbz5Qjb5adhhFpm10ntCuk44MTs08B42YQSYamrzjy7EjQzwpp4TPOB-_VJ6fLVS3-nzGgC9wbIenc_zXiT2Tbj2MPKgm54dVnlmGrdc4lHI3mNcb0WK8GPUyqOzO6YhZhq1KzYG5s_8?width=3403&height=1408&cropmode=none`,
+                `https://bn02pap001files.storage.live.com/y4mGINuIr4hD1vBgtqbpGGpF2k4yS0HdREaHsbwDi5QK1IjdHyuXTm4BGg0xjh0PkFxKWIJhwmczL0Xkn7hW1sJqZGhz63igjAP4x0SfWEZcN5STYcgmhg8JKkVkPoP4HvRBSpcMbRTpoNiA6MMIDrrm0fE7UrGEi0ZiF4yqV4IJIcbKiP7LOo4-EBNgisbKBEv?width=780&height=1040&cropmode=none`,
+            ],
             title: "Farol da Barra(BA)",
             text: "Local muito bonito, principalmente a vista do mar. Arquitetura e história igualmente incríveis.",
             modal: "",
@@ -66,7 +67,10 @@ export function ModalContext(props) {
             filter: "show",
         },
         {
-            img: [TambabaImg, TambabaImg2],
+            img: [
+                `https://bn02pap001files.storage.live.com/y4mcOKX7JTfnyyPzV9OFSpGN2FQjJJQg4orEjxONevB6nX5GVzOLDqeifr5azbUiFELaw2ggV19C5jhrxEeaSYq_d3HB9IJQL4rZyrcZmi2He96dSWcxbAEJ5jO9N8KrDlnFnxZir9viD8FANc0pXonKIHANMGtSfuIdU4tfTlQdexw84ncLiQy_GPF5Q-IPan0?width=1903&height=2166&cropmode=none`,
+                `https://bn02pap001files.storage.live.com/y4mGYXE4ZvUfsNX4g_JUKPUKOSLGPCtrlUTRse20R9AYA0gg18y0-8nyOkCtH7TdpChxA67OIQhSIjn0NipjzqPdZ41J-qvmrEPbnZM5hCtyPH-F8_M39q2GqMd5EDvvHqAFDIhNB0hNblCgp1jx9JG_rXJkWf7lC1k6ypI8J2k_W52mODqzdb5JC4b6lKDqfgo?width=4160&height=2340&cropmode=none`,
+            ],
             title: "Tambaba PB",
             text: "Famosa por ser a praia do nudismo, porém um parte é acessível da forma tradicional e tem uma beleza impecável.",
             modal: "",
@@ -75,7 +79,10 @@ export function ModalContext(props) {
             filter: "show",
         },
         {
-            img: [BArestImg, BArestImg2],
+            img: [
+                `https://bn02pap001files.storage.live.com/y4mH-cz30BbUct96kTojBvtPFdh9beaeshK55xZ_GMCdZyioKBtbziLyMk92BME_WpthR-Ap4heYp4PX3--74M7ymO1iVo8tFNDKUubu-ordr-dhLS1qhl-l411XSlcmnACFbpkiRIesmY6fWJcjGSniAm2qcN6h5u8vzOtV-zxVnRvh2NKbaCK4zfBAZYfM5eh?width=3682&height=3120&cropmode=none`,
+                `https://bn02pap001files.storage.live.com/y4mD7ejxnOLkwBPWFL0f_nBrzUb9jBI-fngw8Hv8EdnElBfChoMKQ1dLjYoR28dwWEEaDn7Wngn3dz_dtksq9ygXJTklfENOVNbamiHdO9H1_RvoeSmdd-YJm2YSPFgtFVnk9-jV4HHw9gyeoafkbIlY--_ni2iMBTXgR6pL-CYRA2exoEPpX6GRH7a5M2w7LxE?width=800&height=486&cropmode=none`,
+            ],
             title: "Mercado Modelo(BA)",
             text: "Mercado de artesanato localizado na cidade de Salvador com dois restaurantes ótimos na cobertura com vista para o mar.",
             modal: "",
@@ -84,7 +91,10 @@ export function ModalContext(props) {
             filter: "show",
         },
         {
-            img: [PErestImg, PErestImg1],
+            img: [
+                `https://bn02pap001files.storage.live.com/y4meurqWd7UUPNJyTp35-RNsi_Mk-Xp5N7IkYRdpmbSHLsPdGHnrbC_wijlD-FpDa1br7D5RTuiO_ZrVw1RyO9ICqSI-GIK_ASPugLUNadnyPCgJbs6HakwFqBooZxmdp4vhp2EghrtRpl5lGBppHV6_fEt8Sycm8FqJdYSQMRILLfAGd9_HQesoIpvU5HJj18o?width=3000&height=4000&cropmode=none`,
+                `https://bn02pap001files.storage.live.com/y4m6GHKanlhHNCqJ9kFsBnUPHAi35CWblRxynxBRTfGXZP4oj0Yt86sCblIhEHar4OBQgrgINkoS3d29ZorTiXVY5IEzzUNmWDCy23U1mGN5QEDAMRWQkvauG6LfDX7NtH5mQPA6jrRh3QgBWpDb4SX2tt7fh3v3uuuhOkbizcjdthhsLo8dmoCyReCKonR7O1T?width=600&height=600&cropmode=none`,
+            ],
             title: "Tio Armênio",
             text: "A culinária do dia a dia no buffet apurado com especialidades brasileiras em ambiente leve com luz natural.",
             modal: "",

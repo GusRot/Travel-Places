@@ -1,6 +1,5 @@
 import React from "react";
 import "./style.scss";
-import PropTypes from "prop-types";
 
 const Pills = ({ keys, local, onClick, selected }) => {
     return (
@@ -14,12 +13,6 @@ const Pills = ({ keys, local, onClick, selected }) => {
             {local}
         </div>
     );
-};
-
-Pills.propType = {
-    local: PropTypes.string.isRequired,
-    onClick: PropTypes.func,
-    selected: PropTypes.bool,
 };
 
 export default Pills;
